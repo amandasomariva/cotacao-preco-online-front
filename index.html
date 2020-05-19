@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br" ng-app="app">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Lista de compras.">
+    <meta name="author" content="Amanda Somariva">
+    <title>Bem-Vindo!</title>
+
+    <link href="style/geral.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+</head>
+
+<body>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Cotação de Preços Online</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" href="javascript:void(0)" ui-sref="produtos" ui-sref-active="active">
+        Lista de Produtos
+      </a>
+      <a class="p-2 text-dark" href="javascript:void(0)" ui-sref="lista-produto-cotacao" ui-sref-active="active">
+        Lista de Cotação
+      </a>
+      <a class="p-2 text-dark" href="javascript:void(0)" ui-sref="cotacao" ui-sref-active="active">
+        Cotação
+      </a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <ui-view></ui-view>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top text-center">
+      <p>Desenvolvido por <a target="_blank" href="https://br.linkedin.com/in/amanda-somariva-b7209917b">Amanda Somariva</a></p>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/angular-resource.min.js"></script>
+
+
+  <script src="app.js"></script>
+  <script src="route.js"></script>
+
+
+
+</body>
+
+</html>
