@@ -1,0 +1,19 @@
+<div class="jumbotron">
+    <form name="cotacaoForm">
+        <label>Fornecedor:</label><input class="form-control" type="text" ng-model="cotacao.nomeFornecedor"
+            ng-required="true"><br>
+        <label>E-mail:</label><input class="form-control" type="text" ng-model="cotacao.emailFornecedor"
+        ng-required="true"><br>
+        <label>Telefone:</label><input class="form-control" type="text" ng-model="cotacao.telefoneFornecedor"
+        ng-required="true"><br> 
+        <label>Valor:</label><input class="form-control" type="text" ng-model="cotacao.valor"
+        ng-required="true"><br>       
+        <button class="btn btn-block btn-primary" ng-disabled="cotacaoForm.$invalid"
+            ng-click="adicionarCotacao(cotacao)">Adicionar Cotação
+        </button>
+
+        <button class="btn btn-block btn-success" ng-click="voltar()">Voltar
+        </button>
+    </form>
+    <hr />
+</div>

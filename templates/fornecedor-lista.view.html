@@ -1,10 +1,6 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-    <h1 class="h2">Produtos</h1>
+    <h1 class="h2">Cotação</h1>
     <div class="btn-toolbar mb-2 mb-md-0">
-        <a ui-sref="produto" class="btn btn-sm btn-outline-success">
-            <span class="fas fa-plus-square"></span>
-            Novo produto
-        </a>
     </div>
 </div>
 <div class="table-responsive">
@@ -12,11 +8,10 @@
     <table class="table table-striped table-sm">
         <thead>
             <tr>
-                <th>Código</th>
-                <th>Produto</th>
-                <th>Data inicial</th>
-                <th>Data final</th>
-                <th></th>
+                <th>Fornecedor</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>Valor</th>
             </tr>
         </thead>
         <tbody>
@@ -26,13 +21,10 @@
                 <!-- <td class="text-center">{{produto.precoProduto | number:2}}</td> -->
                 <td>{{produto.dataInicial | date:'dd/MM/yyyy'}}</td>
                 <td>{{produto.dataFinal | date:'dd/MM/yyyy'}}</td>
-                <td class="text-right">
-                    <a ui-sref="produtoEditar({id:produto.id})"><span class="fas fa-edit"></span></a>
-                    <a href="#" ng-click="excluir(produto.id)"><span class="fas fa-trash-alt"></span></a>
-                    <a ui-sref="fornecedor({id:produto.id})"><span class="fas fa-clipboard-list"></span></a>
+                <button class="btn btn-block btn-success" ng-click="voltar()">Voltar
+                </button>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
-
