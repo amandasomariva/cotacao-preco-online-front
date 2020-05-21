@@ -15,16 +15,15 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="produto in produtos | filter:busca">
-                <td>{{produto.id}}</td>
-                <td>{{produto.nome | uppercase}}</td>
-                <!-- <td class="text-center">{{produto.precoProduto | number:2}}</td> -->
-                <td>{{produto.dataInicial | date:'dd/MM/yyyy'}}</td>
-                <td>{{produto.dataFinal | date:'dd/MM/yyyy'}}</td>
-                <button class="btn btn-block btn-success" ng-click="voltar()">Voltar
-                </button>
+            <tr ng-repeat="cotacao in cotacoes| filter:busca">
+                <td>{{cotacao.nomeFornecedor | uppercase}}</td>
+                <td>{{cotacao.emailFornecedor}}</td>
+                <td>{{cotacao.telefoneFornecedor}}</td>
+                <td class="text-center">{{cotacao.valor | currency:'R$'}}</td>
                 </td>
             </tr>
         </tbody>
     </table>
+    <button class="btn btn-block btn-success" ng-click="voltar()">Voltar
+    </button>
 </div>

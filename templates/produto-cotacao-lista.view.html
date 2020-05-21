@@ -23,7 +23,6 @@
                 <td>{{produto.dataFinal | date:'dd/MM/yyyy'}}</td>
                 <td class="text-right">
                     <a ui-sref="cotacao({id:produto.id})"><span class="fas fa-clipboard-list"></span></a>
-                    <a ui-sref="cotacao({id:produto.id})"><span class="fas fa-clipboard-list"></span></a>
                 </td>
             </tr>
         </tbody>
@@ -35,17 +34,3 @@
     </a>
     </div>
 </div>
-
-
-
-
-<!-- <tr ng-repeat="produto in produtos | filter:busca">
-    <td>{{produto.id}}</td>
-    <td>{{produto.nome | uppercase}}</td>
-    <td class="text-center">{{produto.precoProduto | number:2}}</td>
-    <td>{{produto.dataInicial | date:'dd/MM/yyyy'}}</td>
-    <td>{{produto.dataFinal | date:'dd/MM/yyyy'}}</td>
-    <td class="text-right">
-        <a ui-sref="produtoCotacao({id:produto.id})"><span class="fas fa-clipboard-list"></span></a>
-    </td>
-</tr> -->

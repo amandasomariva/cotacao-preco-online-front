@@ -36,17 +36,11 @@ myApp.config(function ($stateProvider) {
 			templateUrl: './templates/produto-cotacao.view.html',
 			controller: 'ProdutoCotacaoController',
 		})
-		// .state({
-		// 	name: 'cotacaoEditar',
-		// 	url: '/cotacao/:id',
-		// 	templateUrl: './templates/produto-cotacao-lista.view.html',
-		// 	controller: 'ProdutoCotacaoController',
-		// })
-		// .state({
-		// 	name: 'cotacaoExcluir',
-		// 	url: '/cotacao/:id',
-		// 	templateUrl: './templates/prouto-cotacao-lista.view.html',
-		// 	controller: 'ProdutoCotacaoController',
-		// })	
-		
+		.state({
+			name: 'cotacoes',
+			url: 'cotacao/produto/:id',
+			templateUrl: './templates/cotacoes-lista.view.html',
+			controller: 'CotacaoFornecedorController',
+		})
+	
 });
