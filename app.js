@@ -140,4 +140,6 @@ myApp.controller('CotacaoFornecedorController', function ($state, $stateParams, 
 		$state.go('produtos')
 	}
 
+	$scope.ordenacao = "valor";
+
 });

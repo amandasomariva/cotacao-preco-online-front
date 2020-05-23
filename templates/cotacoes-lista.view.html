@@ -1,6 +1,11 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
     <h1 class="h2">Cotação</h1>
-    <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="form-group">
+        <label for="ordenar">Ordenar por: </label>
+              <select class="btn btn-light" ng-model="ordenacao" >
+                     <option value="-valor">Maior preço</option>
+                     <option value="valor">Menor preço</option>
+                </select>
     </div>
 </div>
 <div class="table-responsive">
@@ -11,11 +16,11 @@
                 <th>Fornecedor</th>
                 <th>E-mail</th>
                 <th>Telefone</th>
-                <th>Valor</th>
+                <th class="text-center"> Valor</th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="cotacao in cotacoes| filter:busca">
+            <tr ng-repeat="cotacao in cotacoes| filter:busca | orderBy:ordenacao">
                 <td>{{cotacao.nomeFornecedor | uppercase}}</td>
                 <td>{{cotacao.emailFornecedor}}</td>
                 <td>{{cotacao.telefoneFornecedor}}</td>
