@@ -1,10 +1,10 @@
 <div class="jumbotron">
     <form name="produtoForm">
-        <label>Produto:</label><input class="form-control" type="text" ng-model="produto.nome"
+        <label>Produto:</label><input class="form-control" type="text" ng-model="produto.nome" 
             ng-required="true"><br>
-        <label>Data inicial:</label><input class="form-control" type="text" ng-model="produto.dataInicial"
+        <label>Data inicial:</label><input class="form-control" placeholder="Ex: 2020-01-01" type="text" ng-model="produto.dataInicial"
         ng-required="true"><br>
-        <label>Data final:</label><input class="form-control" type="text" ng-model="produto.dataFinal"
+        <label>Data final:</label><input class="form-control" placeholder="Ex: 2020-01-01" type="text" ng-model="produto.dataFinal"
         ng-required="true"><br>        
         <button class="btn btn-block btn-primary" ng-disabled="produtoForm.$invalid"
             ng-click="adicionarProduto(produto)">Adicionar Produto
